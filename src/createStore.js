@@ -8,7 +8,7 @@ export default function createStore(reducer) {
   }
 
   function getState() {
-    return dispatch({type: '@@INIT'})
+    return reducer(state, {type: '@@INIT'})
   }
 
   return {
